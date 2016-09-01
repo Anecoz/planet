@@ -148,13 +148,39 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="graphics\Shader.cpp" />
+    <ClCompile Include="graphics\ShaderHandler.cpp" />
+    <ClCompile Include="Input\KeyInput.cpp" />
+    <ClCompile Include="Input\MouseButtonInput.cpp" />
+    <ClCompile Include="Input\MousePosInput.cpp" />
+    <ClCompile Include="logic\Camera.cpp" />
+    <ClCompile Include="logic\EntityHandler.cpp" />
+    <ClCompile Include="logic\Game.cpp" />
+    <ClCompile Include="logic\Initializer.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="terrain\Terrain.cpp" />
     <ClCompile Include="utils\OBJLoader.cpp" />
     <ClCompile Include="graphics\VertexArrayObject.cpp" />
+    <ClCompile Include="utils\ShaderUtils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="graphics\Shader.h" />
+    <ClInclude Include="graphics\ShaderHandler.h" />
+    <ClInclude Include="Input\KeyInput.h" />
+    <ClInclude Include="Input\MouseButtonInput.h" />
+    <ClInclude Include="Input\MousePosInput.h" />
+    <ClInclude Include="logic\Camera.h" />
+    <ClInclude Include="logic\EntityHandler.h" />
+    <ClInclude Include="logic\Game.h" />
+    <ClInclude Include="logic\Initializer.h" />
+    <ClInclude Include="terrain\Terrain.h" />
     <ClInclude Include="utils\OBJLoader.h" />
     <ClInclude Include="graphics\VertexArrayObject.h" />
+    <ClInclude Include="utils\ShaderUtils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\terrain.frag" />
+    <None Include="shaders\terrain.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

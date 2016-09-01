@@ -19,7 +19,7 @@ bool OBJLoader::loadFromFile(const std::string& path, std::vector<glm::vec3>& ou
 
 		char lineHeader[128];
 		// read the first word of the line
-		int res = fscanf(file, "%s", lineHeader);
+		int res = fscanf(file, "%s", lineHeader);        
 		if (res == EOF)
 			break; // EOF = End Of File. Quit the loop.
 
@@ -40,9 +40,9 @@ bool OBJLoader::loadFromFile(const std::string& path, std::vector<glm::vec3>& ou
 				printf("File can't be read by our simple parser : ( Try exporting with other options\n");
 				return false;
 			}
-			vertexIndices.push_back(vertexIndex[0]);
-			vertexIndices.push_back(vertexIndex[1]);
-			vertexIndices.push_back(vertexIndex[2]);
+			vertexIndices.push_back(vertexIndex[0] - 1);
+			vertexIndices.push_back(vertexIndex[1] - 1);
+			vertexIndices.push_back(vertexIndex[2] - 1);
 		}
 	}
 	
